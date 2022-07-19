@@ -1,3 +1,8 @@
+# React Project Application Intro
+## Learning the Initial Tools for Creating a React Application
+### Contents and steps are listed inside the file "Anmar.txt"
+
+# Below are the default README Contents of React APP
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

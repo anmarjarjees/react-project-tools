@@ -1,0 +1,115 @@
+Adding React Developer Tools on Chrome:
+searching for chrome web store react dev tool
+which is offered by facebook
+
+Open the terminal for the react folder (project):
+- node has to be already installed => check => node -v
+- you can check also the npm => check => npm -v
+v for version
+
+Running and creating react app:
+Using the package runner command "npx" with the tool "create-react-app" to build our project
+`npx` is a package runner that is used to create a new React application.
+> npx create-react-app react-project1
+
+In the project directory, you can run:
+
+> `npm start`
+=============================================
+
+1. Working on index.js file
+
+2. Adding components to our webpage, by using the file "Apps.js" inside "src" folder
+go to App.js
+
+3. For testing, React has the default file "App.test.js" [inside src folder]
+Below is the content for this file:
+
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+The syntax: 
+> `npm test`
+Running the test will fail as we don't have "/learn react/"
+Because we removed it. So we will delete this file "App.test.js"
+
+We modified the file functions.js to contain our custom code for testing
+
+NOTES: 
+- the command npm test will search for the file that ends with .test.js
+- in our "src" React Folder, we added "ourapp.test.js"
+- the "ourapp.test.js" will search for the js file "functions.js"
+- the results/output of `npm test` will be seen in the terminal window
+- the process of testing our application is called "Test-Driven Development"
+
+4. React App comes with another test utility called "Testing Library".
+You can check it in the file "package.json":
+ 
+ "dependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+
+Let's create another test file "Application.test.js" file
+instead of "App.test.js", I used the name "Application.test.js" file
+
+NOTE:
+Notice that since we have more than one .test.js file,
+React will run them all:
+
+PASS  src/ourapp.test.js
+FAIL  src/Application.test.js
+  ● Test suite failed to run
+
+For all the code and the above explanation, you can check my files:
+- app.js (the recent one)
+- app1.js
+- app2.js
+- app3.js
+- app4.js
+- app5.js
+- app6.js
+- app7.js
+- app8.js
+==========================
+
+5. Adding the components for a "Checkbox" again, two files (inside "src" folder):
+- Checkbox.js file
+- Checkbox.test.js file
+
+6. Working with React Routers:
+React helps us to create what's called "Single Page App". For example: IF a website has 4 pages that shares some of the common/same components like header, footer, sidebar so instead of creating 4 different files, we can create one page acting as a template and only change its content by loading the information of every individual page using JavaScript. It's similar to create templates in PHP language.
+
+To achieve this feature, we need to use routing. We need to install React Router by running npm install 
+Link: https://reactrouter.com/docs/en/v6/getting-started/installation
+
+Using npm:
+Previous Way: 
+> npm install react-router@next react-router-dom@next
+
+Or using the new way:
+> npm install react-router-dom@6
+
+@next to make sure to install the most recent version
+
+Create a new a file named "pages.js" this file will be used to control all the pages for our app
+- pages.js
+
+Setting the router to call every individual function to call its html content based on the URL
+
+- modify index.js file
+- modify app.js file
+
+
+Adding links (a menu to navigate)
+Modifying the pagers.js file
+
+Finally, Adding Nested components (Nesting Links)
+Modifying pages.js file

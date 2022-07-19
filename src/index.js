@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Importing the React Router DOM as we are using a browser to render our page
+// There are also React Router for Native Apps
+import { BrowserRouter as Router } from "react-router-dom"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/*
+Working with React Routers
+*/
+
+
+ReactDOM.render(
+    // Adding the Router element and placing all our App component inside the Router:
+    <Router>
+        <App />
+    </Router>,
+    document.getElementById("root")
+);
